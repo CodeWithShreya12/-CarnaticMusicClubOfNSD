@@ -18,32 +18,26 @@ header {
   color: white;
   padding: 1.5rem 1rem;
 }
-
 .carousel {
   overflow: hidden;
   width: 100%;
+  max-height: 600px;
   position: relative;
-  height: 600px; /* Fixed height for desktop */
-}
-
-@media (max-width: 768px) {
-  .carousel {
-    height: 300px; /* Smaller height for mobile */
-  }
 }
 
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 300%; /* 3 slides = 300%, update if needed */
+  width: 300%; /* Adjust based on number of images */
 }
 
 .slides img {
-  width: 100%;          /* Stretch to parent width */
-  height: 100%;         /* Fill the carousel height */
+  width: 100vw;
+  height: 600px;
   object-fit: cover;
-  flex: 0 0 100%;        /* Each image gets full width */
+  flex-shrink: 0;
 }
+
 
 
 .about, .team {
