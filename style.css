@@ -12,12 +12,46 @@ body {
   color: #333;
 }
 
+/* Header */
 header {
   text-align: center;
   background: #560b5f;
   color: white;
   padding: 1.5rem 1rem;
 }
+
+  .accordion {
+      background-color: #eee;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: center;
+      font-size: 1.5rem;
+      transition: background-color 0.3s ease;
+      border-radius: 8px;
+      margin-top: 1rem;
+      color: #560b5f;
+      font-weight: bold;
+    }
+
+    .accordion.active, .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .accordion-content {
+      padding: 0 1rem;
+      display: none;
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+
+    .accordion-content.show {
+      display: block;
+    }
+
+/* Carousel */
 .carousel {
   overflow: hidden;
   width: 100%;
@@ -28,7 +62,7 @@ header {
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 300%; /* Adjust based on number of images */
+  width: 600%; /* Adjust based on number of images */
 }
 
 .slides img {
@@ -38,12 +72,41 @@ header {
   flex-shrink: 0;
 }
 
-
-
-.about, .team {
+/* About Section */
+.about {
   padding: 2rem;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #560b5f;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #b30059;
+}
+
+/* Team Section */
+.team {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.team h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #560b5f;
 }
 
 .team-category {
@@ -52,13 +115,16 @@ header {
 
 .team-category h3 {
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.2em;
   color: #444;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
 }
 
 .team-grid {
-   display: flex;
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
@@ -68,8 +134,13 @@ header {
   text-align: center;
   background: white;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.member:hover {
+  transform: scale(1.05);
 }
 
 .member img {
@@ -80,6 +151,23 @@ header {
   margin-bottom: 0.5rem;
 }
 
+.role {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Founder Highlight */
+.founder-highlight {
+  border: 3px solid #b30059;
+  box-shadow: 0 6px 12px rgba(179, 0, 89, 0.2);
+}
+
+.instructor-highlight {
+  border: 3px solid green;
+  box-shadow: 0 6px 12px rgba(179, 0, 89, 0.2);
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
