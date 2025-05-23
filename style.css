@@ -156,6 +156,13 @@ header {
   color: #666;
 }
 
+.section-gray {
+  background-color: lightslategray; 
+  width: 100%;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
 /* Founder Highlight */
 .founder-highlight {
   border: 3px solid #b30059;
