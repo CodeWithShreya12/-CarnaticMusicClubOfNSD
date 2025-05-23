@@ -27,63 +27,88 @@
   <section class="about">
     <h2>Our Journey</h2>
     <p>
-In 2022, a passionate high school student named Shreya Battula envisioned a way to share her love for Carnatic music with the younger generation in her community. What began as a small after-school club at Canyon Creek Elementary—with just five curious students—soon blossomed into something far greater. With dedication, heart, and the power of music, the  idea grew into a district-wide initiative that now proudly introduces over 55 students across Canyon Creek and Fernwood Elementary to the rich tradition of Indian classical music.
+In 2022, a passionate high school student named <strong class="highlight">Shreya Battula</strong> envisioned a way to share her love for Carnatic music with the younger generation in her community. What began as a small after-school club at Canyon Creek Elementary—with just five curious students—soon blossomed into something far greater. With dedication, heart, and the power of music, the  idea grew into a district-wide initiative that now proudly introduces this rich tradition of Indian classical music to interested students.
 
-This journey wouldn't have been possible without the unwavering support of Mr. Khedam and Mr. Gray (Canyon Creek’s  Music and Marimba teacher). From the early days of planning to the club’s flourishing success, their guidance has been instrumental every step of the way. What started as a humble spark has now become a shining example of how one student’s passion can inspire a community.
+This journey wouldn't have been possible without the unwavering support of <strong class="highlight">Mr. Srinivas Khedam</strong> and <strong class="highlight">Mr. Elliot Gray</strong> (Canyon Creek’s  Music and Marimba teacher). From the early days of planning to the club’s flourishing success, their guidance has been instrumental every step of the way. What started as a humble spark has now become a shining example of how one student’s passion can inspire a community.
     </p>
   </section>
 
-  <section class="team">
-    <h2>Meet Our Team</h2>
+  <!-- Accordion: Meet Our Team -->
+  <button class="accordion">Meet Our Team</button>
+  <div class="accordion-content show">
+    <section class="team">
 
-    <!-- Founder -->
-    <div class="team-category">
-      <h3>Founder & Lead Instructor</h3>
-      <div class="team-grid">
-        <div class="member">
-          <img src="Shreya.png" alt="Shreya">
-          <h4>Shreya Battula</h4>
+      <div class="team-category founder-section">
+        <h3>Founder & Lead Instructor</h3>
+        <div class="team-grid">
+          <div class="member founder-highlight">
+            <img src="Shreya.png" alt="Shreya">
+            <h4>Shreya Battula</h4>
+            <p class="role">Founder, Lead Instructor - Canyon creek elementary</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Chapter Instructors -->
-    <div class="team-category">
-      <h3>Chapter Instructors</h3>
-      <div class="team-grid">
-        <div class="member">
-          <img src="sohan.jpg" alt="Sohan Vaddi">
-          <h4>Sohan Vaddi</h4>
-        </div>
-        <div class="member">
-          <img src="meenakshi.jpg" alt="Meenakshi Eeshwar">
-          <h4>Meenakshi Eeshwar</h4>
+      <div class="team-category">
+        <h3>Chapter Instructors</h3>
+        <div class="team-grid">
+          <div class="member instructor-highlight">
+            <img src="Sohan.png" alt="Sohan Vaddi">
+            <h4>Sohan Vaddi</h4>
+            <p class="role">Instructor - Maywood hills elementary</p>
+          </div>
+          <div class="member instructor-highlight">
+            <img src="meenakshi.jpg" alt="Meenakshi Eeshwar">
+            <h4>Meenakshi Eeshwar</h4>
+            <p class="role">Instructor - Fernwood elementary</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Co-Instructors -->
-    <div class="team-category">
-      <h3>Co-Instructors</h3>
-      <div class="team-grid">
-        <div class="member">
-          <img src="sathvik.jpg" alt="Sathvik">
-          <h4>Sathvik</h4>
-        </div>
-        <div class="member">
-          <img src="abc.jpg" alt="ABC">
-          <h4>ABC</h4>
+      <div class="team-category">
+        <h3>Co-Instructors</h3>
+        <div class="team-grid">
+          <div class="member  instructor-highlight">
+            <img src="sathvik.jpg" alt="Sathvik">
+            <h4>Sathvik Tadipatri</h4>
+	    <p class="role">Co-Instructor - Fernwood elementary</p>
+          </div>
+          <div class="member  instructor-highlight">
+            <img src="nayana.jpg" alt="ABC">
+            <h4>Nayana Surisetty</h4>
+            <p class="role">Co-Instructor - Canyon Creek elementary</p>
+          </div>
         </div>
       </div>
-    </div>
 
-  </section>
+    </section>
+  </div>
+
+  <!-- Accordion: Timeline -->
+  <button class="accordion">Carnatic Music Club Evolution</button>
+  <div class="accordion-content show">
+    <section class="team">
+      <div class="timeline-image" style="text-align: center; margin-top: 40px;">
+        <img src="ClubHistory.png" alt="Carnatic Music Club History Timeline" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 12px;" />
+      </div>
+    </section>
+  </div>
 
   <footer>
     <p>© 2025 Carnatic Music Club | Northshore School District</p>
   </footer>
 
   <script>
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach((accordion) => {
+      accordion.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.classList.toggle("show");
+      });
+    });
+
+    // Carousel animation
     const slides = document.querySelector(".slides");
     const totalSlides = slides.children.length;
     let index = 0;
