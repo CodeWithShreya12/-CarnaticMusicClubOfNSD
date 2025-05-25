@@ -129,7 +129,7 @@ header {
   color: #444;
   margin-bottom: 20px;
   text-transform: uppercase;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 1px solid gray;
   padding-bottom: 10px;
 }
 
@@ -190,7 +190,7 @@ header {
 }
 
 .mentors-highlight {
-  border: 3px solid blue;
+  border: 3px solid yellow;
   box-shadow: 0 6px 12px rgba(179, 0, 89, 0.2);
 }
 
