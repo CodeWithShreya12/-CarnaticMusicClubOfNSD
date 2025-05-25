@@ -184,6 +184,11 @@ header {
   box-shadow: 0 6px 12px rgba(179, 0, 89, 0.2);
 }
 
+.instructor-highlight {
+  border: 3px solid blue;
+  box-shadow: 0 6px 12px rgba(179, 0, 89, 0.2);
+}
+
 /* Footer */
 footer {
   text-align: center;
